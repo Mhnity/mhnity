@@ -1,0 +1,169 @@
+/**************************************** start footer   ********************/
+footer {
+  background: #282828;
+  padding: 50px 0 50px 0;
+  margin-top: 150px;
+}
+
+footer .map {
+  padding-top: 30px;
+}
+
+footer .links {
+  padding: 20px;
+  position: relative;
+  top: 0;
+}
+
+@media (max-width: 992px) {
+  footer .links {
+    text-align: center;
+    margin: 30px 0;
+  }
+}
+
+footer .links h2 {
+  color: #f80;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+footer .links h2 span {
+  color: #f1f1f1;
+}
+
+@media (max-width: 767px) {
+  footer .links ul {
+    margin-top: 20px;
+  }
+}
+
+footer .links ul li {
+  text-transform: capitalize;
+  font-size: 17px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  footer .links ul li {
+    width: 100%;
+  }
+}
+
+footer .links ul li a {
+  text-decoration: none;
+  color: #999;
+}
+
+footer .links ul li a:hover {
+  color: #f80;
+  cursor: pointer;
+  opacity: .5;
+}
+
+footer .mansoura_logo {
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+footer .mansoura_logo .cont_img {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+}
+
+footer .mansoura_logo .cont_img img {
+  width: 100%;
+  height: 100%;
+}
+
+footer .mansoura_logo h3, footer .mansoura_logo h6 {
+  color: #f1f1f1;
+}
+
+/**************************************** end  footer    ********************/
+/**************************************** start copy right   ********************/
+.copyright {
+  padding: 20px 0;
+  background: #222;
+}
+
+@media (max-width: 992px) {
+  .copyright {
+    text-align: center;
+  }
+}
+
+.copyright .copy {
+  color: #f1f1f1;
+  position: relative;
+  top: 20px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.copyright .copy i {
+  color: #f00;
+  font-weight: bold;
+}
+
+.copyright .copy a {
+  color: #f80;
+  cursor: pointer !important;
+}
+
+.copyright .info {
+  text-align: right;
+}
+
+.copyright .info .social {
+  margin-top: 10px;
+}
+
+.copyright .info .social a {
+  color: #999;
+  background: #555;
+  padding: 0 12px;
+  margin: 0 5px;
+  font-size: 22px;
+  cursor: pointer;
+  -webkit-transition: all .5S ease;
+  transition: all .5S ease;
+}
+
+.copyright .info .social a:hover {
+  background: #2C95D9;
+}
+
+.copyright .info .social a i {
+  font-size: 22px;
+}
+
+.copyright .info .social a i:hover {
+  color: #f80;
+}
+
+@media (max-width: 992px) {
+  .copyright .info {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+  }
+}
+
+/**************************************** end copy right   ********************/
+/************************************************ start scroll to top     *****************/
+.scroll_top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: #2C95D9;
+  cursor: pointer;
+  display: none;
+  font-size: 22px;
+}
+
+/************************************************ end scroll to top      *****************/
+/*# sourceMappingURL=footer.component.css.map */

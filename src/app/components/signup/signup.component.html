@@ -1,0 +1,28 @@
+<section class='signup'>
+    <form #f='ngForm' (ngSubmit)='signup(f)' dir="rtl">
+        <i class="fa fa-users main_user"></i>
+        <h1 class='text-center main_title'> انشاء حساب جديد </h1>
+        <div>
+            <input type="text" name='name' ngModel #name='ngModel' placeholder="الاسم" required>
+            <div class="alert-danger" *ngIf='name.touched && name.errors?.required'> هذا الحقل مطلوب </div>
+        </div>
+        <div>
+            <input type="email" name='email' ngModel #mail='ngModel' placeholder="البريد الالكتروني" required email>
+            <div class="alert-danger" *ngIf='mail.touched && mail.errors?.required'> هذا الحقل مطلوب</div>
+            <div class="alert-danger" *ngIf='mail.touched && mail.errors?.email'> ادخل البريد بشكل صحيح </div>
+        </div>
+        <div>
+            <input type="password" name='password' ngModel #pass='ngModel' placeholder="رقم سري" required minlength="6">
+            <div class="alert-danger" *ngIf='pass.touched && pass.errors?.required'> هذا الحقل مطلوب  </div>
+            <div class="alert-danger" *ngIf='pass.touched && pass.errors?.minlength'> يجب ان يكون  علي الاقل  ستة احرف مختلفين  </div>
+        </div>
+        <div>
+            <input type="password" name='confpass' ngModel #confpass='ngModel' placeholder="تاكيد رقم سري" required>
+            <div class="alert-danger" *ngIf='confpass.touched && confpass.errors?.required'> هذا الحقل مطلوب  </div>
+            <div class="alert-danger" *ngIf='confpass.touched && pass.value != confpass.value'> غير مطابق </div>
+        </div>
+        <button *ngIf='f.valid'> انشاء حساب  </button>
+        <div class="alert-danger"> {{errmsg}}</div>
+    </form>
+</section>
+

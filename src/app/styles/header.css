@@ -1,0 +1,97 @@
+/********************************************************start header *************************/
+.title {
+  font-family: 'Cairo', sans-serif;
+  margin-top: 60px;
+  text-align: right;
+  padding: 7px 30px;
+  background: #f1f1f100;
+}
+
+.title h1 {
+  font-size: 20px;
+}
+
+.title h1 span {
+  font-size: 16px;
+  color: #007BFF;
+}
+
+header {
+  font-family: 'Cairo', sans-serif;
+  height: 60vh;
+  background-size: cover;
+  position: relative;
+}
+
+header .slider .slide {
+  position: relative;
+  z-index: 22;
+  top: 138px;
+  width: 100%;
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+header .slider .slide .carousel-indicators {
+  position: absolute;
+  bottom: 0;
+}
+
+header .slider .slide .carousel-indicators li {
+  background: #222 !important;
+  border-radius: 50%;
+  border-color: #f4f4f4;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+}
+
+header .slider .slide .carousel-inner .carousel-item .item {
+  text-align: center;
+  padding: 20px 15px 0 15px;
+}
+
+header .slider .slide .carousel-inner .carousel-item .item p {
+  font-size: 20px;
+  color: #111 !important;
+}
+
+header .slider .slide .carousel-inner .carousel-item .item a {
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+header .main_info {
+  text-align: right;
+  padding-top: 140px;
+  position: relative;
+  z-index: 999;
+}
+
+header .main_info h1 {
+  font-weight: bold;
+  font-size: 40px;
+  color: #f1f1f1;
+}
+
+header .main_info p {
+  padding-right: 30px;
+  font-size: 22px;
+  color: #f80;
+  font-weight: bold;
+}
+
+header .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/********************************************* end header *****************/
+/*# sourceMappingURL=header.css.map */

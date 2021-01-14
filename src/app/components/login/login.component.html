@@ -1,0 +1,18 @@
+<section class="login">
+    <form #f='ngForm' (ngSubmit)='login(f)' dir="rtl">
+        <i class="fa fa-user main_user"></i>
+        <h1 class='text-center main_title' > تسجيل الدخول </h1>
+        <div>
+            <input type="email" name='email' ngModel #mail='ngModel' placeholder="البريد الالكتروني" required email>
+            <div class="alert-danger" *ngIf='mail.touched && mail.errors?.required'> هذا الحقل مطلوب</div> 
+            <div class="alert-danger" *ngIf='mail.touched && mail.errors?.email'> ادخل البريد بشكل صحيح </div> 
+        </div>
+        <div>
+            <input type="password" name='password' ngModel #pass='ngModel' placeholder="password" required minlength="4">
+            <div class="alert-danger" *ngIf='pass.touched && pass.errors?.required'> هذا الحقل مطلوب </div>
+            <div class="alert-danger" *ngIf='pass.touched && pass.errors?.minlength'> رقم سري غير صحيح </div>
+        </div>
+        <button> دخول </button>
+        <div class="alert-danger"> {{errmsg}}</div>
+    </form>
+</section>

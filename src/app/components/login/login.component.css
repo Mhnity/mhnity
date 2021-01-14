@@ -1,0 +1,93 @@
+form {
+  border-radius: 34px;
+  width: 450px;
+  margin: 130px auto 0 auto;
+  background: #3A7FC4;
+  border: 1px solid #fff;
+  padding: 50px 15px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  form {
+    width: 100% !important;
+  }
+}
+
+form .main_user {
+  font-size: 63px;
+  position: absolute;
+  top: -44px;
+  padding: 25px 29px;
+  border-radius: 50%;
+  left: 38%;
+  color: #ffffff;
+  background: #3A7FC4;
+}
+
+form .input_user {
+  position: absolute;
+  right: 25px;
+  top: 44%;
+  color: #555555e0;
+}
+
+form .input_key {
+  position: absolute;
+  right: 25px;
+  top: 61%;
+  color: #555555e0;
+}
+
+form h1 {
+  margin: 0 0 20px 0;
+  color: #fff;
+}
+
+form div {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+form div input {
+  width: 100%;
+  padding: 9px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #F2F2F2;
+  background: #F2F2F2;
+}
+
+form .alert {
+  margin-top: 5px;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
+form button {
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  outline: none;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 35px;
+  font-size: 20px;
+  border-radius: 10px;
+  background: #3A7FC4;
+}
+
+form button:hover {
+  background: #f1f1f1;
+  color: #3A7FC4;
+}
+
+form .err {
+  color: #f00;
+}
+
+form dir {
+  margin: 0;
+  padding-left: 0;
+}
+/*# sourceMappingURL=login.component.css.map */

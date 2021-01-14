@@ -1,0 +1,25 @@
+a{
+    cursor: pointer;
+    &:hover{
+        color:red !important;
+    }
+}
+
+form {
+    width:350px;
+    min-height: 120px;
+    background:#fff;
+    color:#222;
+    padding:20px;
+    text-align: right;
+    @media(max-width:600px){
+        width:340px;
+        
+    }
+    .buttons{
+        button{
+            margin:0 20px;
+        }
+    }
+}
+

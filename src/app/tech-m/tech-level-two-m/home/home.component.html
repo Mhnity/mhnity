@@ -1,0 +1,197 @@
+<!---------------------------------- start header   ------------------------------->
+
+<header>
+    <div class="container">
+        <div class='row'>
+            <div class='col-lg'>
+                <div class='slider slid'> 
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"> 
+                                <div class="item">
+                                    <p dir="rtl"> " التفوق في مجال العلم والتكنولوجيا يعزز شعور الفخر بالوطن " </p>
+                                    <a href='#'>احمد زويل </a>
+                                </div>
+                            </div>
+                    
+                            <div class="carousel-item">
+                                <div class="item">               
+                                    <p dir="rtl"> " إذا كنت تريد أتمتة السيارات و إنقاذ حياة الناس ، فإن المهارات التي تحتاج إليها هي دراسه التكنولوجيا</p>
+                                    <a href='#'> لاري بايج </a>
+                                </div> 
+                            </div>
+                    
+                            <div class="carousel-item"> 
+                                <div class="item">
+                                    <p dir="rtl"> " التكنولوجيا هي مجرد أداة . فيما يخص تحفيز الأطفال و جعلهم يعملون معا فإن المعلم هو الأهم. "</p>
+                                    <a href='#'> بيل غيتس </a>
+                                </div>
+                            </div>
+                    
+                            <div class="carousel-item"> 
+                                <div class="item">
+                                    <p dir="rtl"> " أخشى اليوم الذي ستتجاوز فيه التكنولوجيا تفاعلنا البشري .. فإنّه سيكون للعالم يومئذٍ جيلٌ من البلهاء. " </p>
+                                    <a href='#'>ألبرت أينشتاين  </a>
+                                </div>
+                            </div>  
+                            
+                            <div class="carousel-item"> 
+                                <div class="item">
+                                    <p dir="rtl">  " التكنولوجيا نجحت في تحديد موقعك على الأرض , تبقّى البحث عن تقنية تحدد فيها: موقعك في الحياة " </p>
+                                    <a href='#'> حسن كمال </a>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item"> 
+                                <div class="item">               
+                                    <p dir="rtl"> " يقودنا المحامون الذي لا يفهمون التكنولوجيا ولا الميزانيات العمومية." </p>
+                                    <a href='#'> توماس فريدمان </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  <!---------------------- end slider ------------->
+            </div>
+
+            <div class='col-lg'> <!-- part two -->
+                <div class="main_info" >
+                    <h1 id='big_tech_two'></h1>
+                    <p id="small_tech_two"></p>
+                </div>
+            </div>
+        </div><!-- end row-->
+        </div><!-- end container -->
+    <div class='overlay'></div>
+</header>
+<!----------------------------------- end  header   ------------------------------>
+
+
+<!---------------------------------- start content   ------------------------------->
+<section class='content'>
+    <div class="container">
+        <div class="titles">
+            <div class="main_title">
+                <h2> مواد دراسية </h2>
+                <span class="sp_one"> </span>
+            </div>
+            <div class="litle_title">
+                <h2> الترم الاول </h2>
+                <span class="sp_one"> </span>
+                <span  class="sp_two"> </span>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3"  *ngFor='let c of first_term_courses; index as i'>
+                <div class="item" (mouseover)='cardinfo(section,level,term,mat.value,i)'> <!-- ارسال الداتا-->
+                    <div class="cont_img">
+                        <img src="{{c.img_cover}}" alt="">
+                        <div class="overlay" (click)='showlesson(mat.value)' title="اضغط للمشاهده"></div> 
+                    </div>
+                    <p class='techer' title="مدرس الماده">
+                        {{c.Doctor}} 
+                    </p>
+                   
+                    <div dir="rtl" class='middel' (click)='showlesson(mat.value)' title="اضغط للمشاهده">
+                        <input #mat value='{{c.subject}}' disabled  >
+                    </div>
+
+                    <div class='term'><!-- مخفية عشان امسك بيها البيانت بس -->
+                        <h1 #section>{{c.section}}</h1>
+                        <h1 #level>{{c.level}}</h1>
+                        <h1 #term>{{c.term}}</h1>
+                    </div>
+
+                    <div class='drop' *ngIf='isuser'>
+                        <i class="fas fa-pen-square pin" ></i>
+                        <div class="btn-group" dir="ltr">
+                            <button  title="اضافة وحذف" type="button" id="dropdownMenuButton" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" (click)='addlesson()'><i class="fas fa-plus"></i>اضافة محاضره </a>
+                                    <a class="dropdown-item" (click)='delate()'><i class="fas fa-trash-alt"></i>حذف الماده</a>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <div class="description">
+                        <div class='view' title="تاريخ النشر"> 
+                            <i class="far fa-clock"></i> {{c.date}} 
+                        </div>
+                        <div class='star' title="التقيم">
+                            <i class="far fa-star"></i> 
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------------- start second term --------------------------------->
+        <div class="litle_title">
+            <h2> الترم الثاني </h2>
+            <span class="sp_one"> </span>
+            <span  class="sp_two"> </span>
+        </div> 
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3"  *ngFor='let c of second_term_courses; index as i'>
+                <div class="item" (mouseover)='cardinfo(section,level,term,mat.value,i)'><!-- من هنا هبعت الداتا للشارد-->
+                    <div class="cont_img">
+                        <img src="{{c.img_cover}}" alt="">
+                        <div class="overlay" (click)='showlesson(mat.value)' title="اضغط للمشاهده"></div> 
+                    </div>
+                    <p class='techer' title="مدرس الماده">
+                        {{c.Doctor}} 
+                    </p>
+                   
+                    <div dir="rtl" class='middel' (click)='showlesson(mat.value)' title="اضغط للمشاهده">
+                        <input #mat value='{{c.subject}}' disabled  >
+                    </div>
+
+                    <div class='term'><!-- مخفية عشان امسك بيها الترم بس -->
+                        <h1 #section>{{c.section}}</h1>
+                        <h1 #level>{{c.level}}</h1>
+                        <h1 #term>{{c.term}}</h1>
+                    </div>
+
+                    <div class='drop' *ngIf='isuser'>
+                        <i class="fas fa-pen-square pin" ></i>
+                        <div class="btn-group" dir="ltr">
+                            <button  title="اضافة وحذف" type="button" id="dropdownMenuButton" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" (click)='addlesson()'><i class="fas fa-plus"></i>اضافة محاضره </a>
+                                    <a class="dropdown-item" (click)='delate()'><i class="fas fa-trash-alt"></i>حذف الماده</a>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <div class="description">
+                        <div class='view' title="تاريخ النشر"> 
+                            <i class="far fa-clock"></i> {{c.date}} 
+                        </div>
+                        <div class='star' title="التقيم">
+                            <i class="far fa-star"></i> 
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!----------------------------------- end  content   ------------------------------->

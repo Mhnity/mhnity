@@ -1,0 +1,578 @@
+/********************************************************start header *************************/
+header {
+  font-family: 'Cairo', sans-serif;
+  background: url("../../../assets/imgs/header/students2.jpg");
+  background-size: cover;
+  height: 92vh;
+  padding-top: 150px;
+  margin-top: 9vh;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+header .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+header .info {
+  text-align: right;
+  padding: 10px;
+  line-height: 1.7;
+  position: relative;
+  z-index: 2;
+  /* start button */
+  /* end button */
+}
+
+header .info .welcome {
+  font-weight: bold !important;
+  text-align: center;
+  padding: 0 20px;
+  font-size: 40px;
+  margin: 5px auto;
+}
+
+header .info .welcome a {
+  text-decoration: none;
+  background-color: #322c25;
+  color: #f80;
+  cursor: pointer;
+  padding: 3px 23px;
+  font-size: 28px;
+}
+
+header .info .welcome a:hover {
+  background: #423a32 !important;
+}
+
+@media (max-width: 767px) {
+  header .info .welcome a {
+    display: block;
+    width: 70%;
+    margin: 5px auto;
+  }
+}
+
+header .info p {
+  font-size: 20px;
+  font-weight: normal;
+  color: #f1f1f1;
+  line-height: 1.8;
+  word-spacing: 3px;
+}
+
+@media (max-width: 767px) {
+  header .info p {
+    font-size: 17px;
+    width: 100% !important;
+  }
+}
+
+header .info p span {
+  font-weight: bold;
+  font-size: 35px !important;
+}
+
+header .info button {
+  border: none;
+  outline: none;
+  position: absolute;
+  padding: 15px 35px;
+  left: 50%;
+  margin-left: -76px;
+  background: -webkit-gradient(linear, left top, right top, from(#b1732d), to(#ce3f07));
+  background: linear-gradient(90deg, #b1732d, #ce3f07);
+  text-transform: uppercase;
+  color: #f1f1f1;
+  font-weight: bold;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+header .info button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#ce3f07), to(#b1732d));
+  background: linear-gradient(90deg, #ce3f07, #b1732d);
+}
+
+/********************************************* end header **********************************/
+/********************************************* start features**********************************/
+.features {
+  font-family: 'Cairo', sans-serif;
+  margin: 50px 0;
+  padding-top: 50px;
+}
+
+.features .item {
+  margin-top: 40px;
+  text-align: center;
+  padding: 25px 20px;
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 8px 2px #99999991;
+  -o-box-shadow: 0 0 8px 2px #99999991;
+  -ms-box-shadow: 0 0 8px 2px #99999991;
+  box-shadow: 0 0 8px 2px #99999991;
+  -webkit-transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.features .item:hover {
+  background: #f1f1f1;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+
+.features .item i {
+  color: #007BFF;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.features .item h3 {
+  color: #111 !important;
+}
+
+/********************************************* end features **********************************/
+/*********************************  start team plance and fills  *******************************/
+.plans {
+  font-family: 'Cairo', sans-serif;
+  margin: 150px 0;
+  /** end plan **/
+}
+
+.plans .plan .cont_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.plans .plan .info {
+  text-align: right;
+  padding: 50px 0 0 0;
+}
+
+.plans .plan .info h2 {
+  font-size: 33px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.plans .plan .info p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #959597;
+  margin-top: 20px;
+}
+
+.plans .plan .info a {
+  font-weight: 700;
+  font-size: 14px;
+  color: #523ee8;
+  cursor: pointer;
+}
+
+.plans .plan .info a i {
+  font-size: 15px;
+  position: relative;
+  top: 4px;
+  left: -100px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.plans .plan .info a:hover {
+  color: #50006F;
+}
+
+.plans .plan .info a:hover i {
+  left: -107px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .plans .plan .info {
+    margin-top: -80px;
+  }
+}
+
+.plans .fills {
+  /** start fills  **/
+  margin-top: 150px;
+}
+
+/*********************************  end team plance and fills  *******************************/
+/*********************************  start sections    *******************************/
+.sections {
+  font-family: 'Cairo', sans-serif;
+  margin: 150px 0;
+  padding: 30px 0;
+  background: #f4f4f4;
+}
+
+.sections .title {
+  color: #222;
+  font-weight: bold;
+}
+
+.sections .item {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  background: #fff;
+  padding: 40px 20px;
+  margin-top: 50px;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 8px 2px #99999991;
+  -o-box-shadow: 0 0 8px 2px #99999991;
+  -ms-box-shadow: 0 0 8px 2px #99999991;
+  box-shadow: 0 0 8px 2px #99999991;
+}
+
+.sections .item:hover .overlay {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sections .item:hover i, .sections .item:hover p {
+  color: #007BFF;
+}
+
+.sections .item .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.sections .item i {
+  font-size: 50px;
+  margin: 20px 0 30px 0;
+  color: #34495e;
+}
+
+.sections .item p {
+  display: block;
+  font-size: 22px;
+  color: #000;
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
+}
+
+/*********************************  end sections   *******************************/
+/*********************************  start talents   *******************************/
+.talants {
+  margin: 150 0;
+  padding-top: 50px;
+}
+
+.talants .item {
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.talants .item:hover {
+  cursor: pointer;
+}
+
+.talants .item:hover img {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+.talants .item .cont_img img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.talants .item .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/*********************************  end talents   *******************************/
+/*********************************  start questions    *******************************/
+.questions {
+  margin: 150px 0;
+}
+
+@media (max-width: 991px) {
+  .questions {
+    margin-bottom: 50px;
+  }
+}
+
+.questions .main_title {
+  top: 70px;
+}
+
+.questions .cont_img {
+  padding-top: 60px;
+}
+
+.questions .cont_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.questions .info {
+  text-align: right;
+  padding-top: 80px;
+}
+
+.questions .info .list li {
+  line-height: 1.7;
+}
+
+.questions .info .list li::after {
+  content: "\f059";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-top: 2px;
+  color: #2C95D9;
+}
+
+.questions .info .list li a {
+  color: #666;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.questions .info .list li a:hover {
+  color: #2C95D9;
+}
+
+/*********************************  end questions    *******************************/
+/**************************************** sart contact us   ********************/
+.contact_us {
+  margin-top: 150px;
+  background: #f1f1f1;
+  padding-top: 50px;
+}
+
+@media (max-width: 767px) {
+  .contact_us {
+    margin-top: 50px;
+  }
+}
+
+.contact_us .contact_form .contact_img {
+  width: 100%;
+  height: 450px;
+  padding-top: 20px;
+}
+
+.contact_us .contact_form .contact_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.contact_us .contact_form .big_row {
+  padding: 20px;
+}
+
+.contact_us .contact_form .big_row h2 {
+  text-transform: capitalize;
+  font-size: 33px;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .contact_us .contact_form .big_row h2 {
+    margin-top: 20px;
+    margin-bottom: -10px;
+  }
+}
+
+.contact_us .contact_form .big_row h2 span {
+  color: #f80;
+}
+
+.contact_us .contact_form .big_row form {
+  margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+  .contact_us .contact_form .big_row form {
+    margin-top: 0;
+  }
+}
+
+.contact_us .contact_form .big_row form .inputbox {
+  cursor: text;
+  height: 30px;
+  position: relative;
+}
+
+.contact_us .contact_form .big_row form .inputbox input {
+  position: absolute;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  outline: none;
+  padding-left: 5px;
+  border: none;
+}
+
+.contact_us .contact_form .big_row form .inputbox input:focus, .contact_us .contact_form .big_row form .inputbox input:valid {
+  /*when it full of text */
+}
+
+.contact_us .contact_form .big_row form .inputbox input:focus + .sp_text, .contact_us .contact_form .big_row form .inputbox input:valid + .sp_text {
+  top: -30px;
+  left: 0;
+}
+
+.contact_us .contact_form .big_row form .inputbox input:focus ~ .line, .contact_us .contact_form .big_row form .inputbox input:valid ~ .line {
+  height: 100%;
+}
+
+.contact_us .contact_form .big_row form .inputbox .sp_text {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 15px;
+  padding: 0 4px;
+  display: block;
+  color: #999;
+  text-transform: capitalize;
+  -webkit-transition: all .5S ease;
+  transition: all .5S ease;
+}
+
+.contact_us .contact_form .big_row form .inputbox .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: #afa5a542;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.contact_us .contact_form .big_row .row_2 {
+  margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+  .contact_us .contact_form .big_row .row_2 {
+    margin-top: 0;
+  }
+}
+
+.contact_us .contact_form .big_row button {
+  width: 95%;
+  margin: 40px auto 30px auto;
+  padding: 7px 0;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 23px;
+  background: -webkit-gradient(linear, left top, right top, from(#b1732d), to(#ce3f07));
+  background: linear-gradient(90deg, #b1732d, #ce3f07);
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  -webkit-transition: all 2S ease;
+  transition: all 2S ease;
+}
+
+.contact_us .contact_form .big_row button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#ce3f07), to(#b1732d));
+  background: linear-gradient(90deg, #ce3f07, #b1732d);
+  top: -2px;
+}
+
+.contact_us .contact_form .big_row p {
+  color: #5a5555d4;
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .contact_us .big:not(first-child) {
+    margin-top: 50px;
+  }
+}
+
+/**************************************** end contact us   ********************/
+/************************************************start my fram work *****************/
+.main_title {
+  text-align: right;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.main_title h2 {
+  color: #333;
+  font-weight: bold !important;
+  font-size: 38px;
+}
+
+.main_title .sp_one {
+  display: block;
+  width: 50px;
+  background: #2C95D9;
+  height: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 54px;
+}
+
+.main_title .sp_two {
+  display: block;
+  width: 90px;
+  background: #2C95D9;
+  height: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 65px;
+}
+
+@media (max-width: 767px) {
+  .d-xs-none {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .d-xs-block {
+    display: block;
+  }
+}
+
+/***************************************** end my fram work ********************/
+/*# sourceMappingURL=home.component.css.map */

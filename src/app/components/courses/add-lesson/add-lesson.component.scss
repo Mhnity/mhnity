@@ -1,0 +1,28 @@
+form{
+    padding:10px;
+    text-align: right;
+    background:#f1f1f1;
+    @media(max-width:600px){
+        width:340px;
+        
+    }
+    h1{
+        text-align: center;
+        color:#007BFF;
+        span{
+            color:#f50;
+        }
+    }
+    input{
+        padding:8px;
+        display: block;
+        width:340px;
+        border-radius: 5px;
+        outline: none;
+        margin:10px 0;
+        border:1px solid #007BFF;
+    }
+    button{
+        margin:15px;
+    }
+}

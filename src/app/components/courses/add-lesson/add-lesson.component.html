@@ -1,0 +1,8 @@
+<form #f='ngForm' (ngSubmit)='add(f)' dir="rtl">
+    <h1> اضافة محاضره جديده الي مادة <span> {{material}} </span> </h1>
+    <input type="text" name='week' ngModel #week='ngModel'  placeholder="الاسم">
+    <input type="text" name='name' ngModel #name='ngModel'  placeholder="موضوع المصدر ">
+    <input type="text" name='link' ngModel #link='ngModel'  placeholder="رابط جوجل درايف او يوتيوب">
+    <button class='btn btn-primary'> اضافة </button>
+    <button class='btn btn-danger' (click)='cancel()'> الغاء </button>
+</form>

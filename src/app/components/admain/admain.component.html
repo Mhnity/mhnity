@@ -1,0 +1,489 @@
+
+<div class="admin">
+    <div class="row">
+        <!-- start form -->
+        <div class="child_one  col-lg">
+            <form #f='ngForm' (ngSubmit)='addcourse(f)' dir="rtl">
+                <h1 class='add_cours'> اضافة <span> كورس </span> جديد  </h1>
+                <div class="cours_title">
+                    <h4 class='title_one' #title_one> .......     </h4> <span> / </span>
+                    <h4 class='title_two' #title_two> .......  </h4> <span> / </span>
+                    <h4 class='title_three' #title_three> .....    </h4>
+                </div>
+                <div>
+                    <input type="text" name='name' ngModel #name='ngModel'  placeholder="فرع" required>
+                    <div *ngIf='name.touched && name.errors?.required'  class='alert alert-danger'> *   ادخل اسم الفرع   </div>
+                </div>
+
+                <div>
+                    <input type="text" name='subject' ngModel #subject='ngModel'  placeholder="الماده" required>
+                    <div *ngIf='subject.touched && subject.errors?.required'  class='alert alert-danger'> *   ادخل اسم الماده </div>
+                </div>
+            
+                <div>
+                    <input type="date" name='date' ngModel #date='ngModel'   placeholder="التاريخ" required>
+                    <div class='alert alert-danger' *ngIf='date.touched && date.errors?.required'> * اختر تاريخ الكورس  </div>
+                </div>
+
+                <div class='img_div'>
+                    <label> صوره غلاف الكورس</label>
+                    <span class='text-right' dir="ltr"> {{img.value | slice:12}} </span>
+                    <input type="file" name='img'  ngModel #img required>
+                </div>
+
+                <button class='btn the_button btn-primary' *ngIf='f.valid'> اضافة     </button>
+                
+            </form>
+        </div>
+
+
+
+        <!-- start dash board -->
+        <div class="child_two col-lg">
+            <!--
+                <ul style="margin-top:200px" class='top'>
+                    <li> <a> compurter </a></li>
+                    <li> <a> arts </a></li>
+               </ul> 
+            -->
+           
+            <div class="add_title" dir="rtl">
+                <h1> اختر </h1> &nbsp; 
+                <h4> القسم     </h4> <span> + </span>
+                <h4 > الفرقة  </h4> <span> + </span>
+                <h4> الترم    </h4>
+            </div>
+            <aside dir="rtl">
+                <div class='menus'>
+                    <!------------------ computer -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'><i class="fas fa-caret-left"></i> محلات </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul '>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  ماركت </a>
+                                <ul>
+                                    <li class='term'> دفعة اولي  </li>
+                                    <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> حلويات </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> موبايل </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> اعلاف </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> جزاره </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> عطاره </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> فراخجي </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> ملابس </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> بويات </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!------------------ technology -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'>  <i class="fas fa-caret-left"></i> دكتور   </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul'>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> بيطري </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> اطفال </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> باطني </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'>  اسنان </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  جلدية  </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> مخ واعصاب </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> عظام </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'>  علاج طبيعي </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  نساء وتوليد  </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> عيون </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> انف واذن </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  مسالك   </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!------------------ music  -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'> <i class="fas fa-caret-left"></i> صيدلية  </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul'>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> بشرية </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> بيطرية </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                 
+
+                    <!------------------ economic -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'><i class="fas fa-caret-left"></i>  تدريس   </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul'>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  كي جي </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  ابتدائي </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'>  اعدادي </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  ثانوي </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!------------------ media -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'> <i class="fas fa-caret-left"></i> معمار   </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul'>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> نجار مسلح </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> حداد مسلح </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> بناء </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  محاره </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> سباك </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> مبلط </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'>  رخام </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  نقاش </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> جبس </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> موبلية </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> كهرباء  </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  مساعدين وعمال </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                      <!------------------ cars -->
+                      <div class='menu'>
+                        <h2> 
+                            <a class='sec'><i class="fas fa-caret-left"></i>  خدمات نقل   </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul'>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  تقيل </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  جامبو </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'>  ربع نقل </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  تاكسي وميكروباص </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!------------------ stage -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'> <i class="fas fa-caret-left"></i> شركات  </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul'>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> سياحة</a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  عقارات </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'>  سيارات </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'>  سيراميك  </a>
+                                <ul>
+                                    <li>   دفعة اولي  </li>
+                                  <!--   <li>   دفعة ثانية </li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
+
+

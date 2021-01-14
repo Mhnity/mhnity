@@ -1,0 +1,21 @@
+<div class="container products">
+    <div class="row">
+        <div class="col-sm-6  col-lg-4" *ngFor='let offer of offers; index as i '>
+            <div class="card text-right" (mouseover)='sendname(ofname)'>
+                <a class='delate' (click)='delate()'> <i class="fas fa-trash-alt" title="حذف الاعلان "></i> </a>
+                <div class='cont_img'> <img src="{{offer.img}}" class="card-img-top" alt="..."> </div>
+                <div class="card-body">
+                    <p> <span #ofname>{{offer.name}}</span>  <bdi> <span class='tit'>  الاسم :</span> </bdi> </p>
+                    <p> <span> {{offer.gov}} </span>  <bdi> <span class='tit'> محافظة :</span> </bdi>  </p>
+                    <p> <span> {{offer.sec}} </span>  <bdi> <span class='tit'> مركز :</span> </bdi>  </p>
+                    <p> <span> {{offer.address}} </span>  <bdi> <span class='tit'> عنوان :</span> </bdi>  </p>
+
+                    <p> <span> {{offer.times}} </span> <bdi> <span class='tit'> مواعيد العمل :</span> </bdi> </p>
+                    <p> <span> {{offer.phone}} </span> <bdi> <span class='tit'> تليفون :</span> </bdi>  </p>
+                    <p> <span> {{offer.offer}} </span> <bdi> <span class='tit'> عروض :</span> </bdi>  </p>
+                    <p> <span> {{offer.email}} </span> <bdi> <span class='tit'> ايميل  :</span> </bdi></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

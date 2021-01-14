@@ -1,0 +1,85 @@
+<section class='signup'>
+    <form #f='ngForm'  dir="rtl" (ngSubmit)='addOffer(f)'>
+        <i class="fa fa-users main_user"></i>
+        <h1 class='text-center main_title'> اضف مجالك مجانا </h1>
+
+ 
+        <!--
+        <div class="control-section select_container"> 
+            <div id='content'>
+                <ejs-dropdownlist class="text-right"  id='diacritics' #Gov
+                 [dataSource]='data' [allowFiltering]='true'
+                  [ignoreAccent]='true' placeholder='اختر محافظتك'
+                  filterBarPlaceholder='محافظتك'>
+                </ejs-dropdownlist>
+            </div>
+        </div>
+
+        <div class="control-section select_container" > 
+            <div id='content'>
+                <ejs-dropdownlist class="text-right"  id='diacritics' #Sec
+                 [dataSource]='data2' [allowFiltering]='true'
+                  [ignoreAccent]='true' placeholder='اختر مركزك'
+                  filterBarPlaceholder='مركزك'>
+                </ejs-dropdownlist>
+            </div>
+        </div>
+        -->
+
+        <div>
+            <input type="text" name='name' ngModel #name='ngModel' placeholder=" اسمك   او   اسم المشروع   او  الوظيفة   او    الخدمة" required>
+            <div class="alert-danger" *ngIf='name.touched && name.errors?.required'> هذا الحقل مطلوب </div>
+        </div>
+
+        <div>
+            <input type="text" name='Gov' ngModel #Gov='ngModel' placeholder="محافظة" required>
+            <div class="alert-danger" *ngIf='Gov.touched && Gov.errors?.required'> هذا الحقل مطلوب </div>
+        </div>
+        
+        <div>
+            <input type="text" name='Sec' ngModel #Sec='ngModel' placeholder="مركز - مدينة " required>
+            <div class="alert-danger" *ngIf='Sec.touched && Sec.errors?.required'> هذا الحقل مطلوب </div>
+        </div>
+
+        <div>
+            <input type="text" name='mobile' ngModel #mobile='ngModel' placeholder="موبايل - تليفون  للتواصل معك" required>
+            <div class="alert-danger" *ngIf='mobile.touched && mobile.errors?.required'> هذا الحقل مطلوب </div>
+        </div>
+
+        <div class='img_div'>
+            <label #label>   صوره   </label>
+            <span class='text-right' dir="ltr" #spn> {{img.value | slice:12}} </span> <!---->
+            <input type="file" name='img'  ngModel #img required >
+        </div>
+        
+        <div>
+            <input type="text" name='address' ngModel #address='ngModel' placeholder="عنوان اكثر توضيحا (اختياري)">
+            <div class="alert-danger" *ngIf='address.touched && address.errors?.required'> هذا الحقل مطلوب </div>
+        </div>
+
+        <div>
+            <input type="text" name='times' ngModel #times='ngModel' placeholder="مواعيد العمل (اختياري)" >
+            <div class="alert-danger" *ngIf='times.touched && times.errors?.required'> هذا الحقل مطلوب </div>
+        </div>
+
+       
+
+        <div>
+            <input type="text" name='offers' ngModel #offers='ngModel' placeholder="عروض (اختياري)" >
+        </div>
+        <div>
+            <input type="email" name='email' ngModel #mail='ngModel' placeholder="البريد الالكتروني  (اختياري)"  email>
+            <div class="alert-danger" *ngIf='mail.touched && mail.errors?.email'> ادخل البريد بشكل صحيح </div>
+        </div>
+
+ 
+        <button *ngIf='f.valid'> اضافة   </button>
+        <p class='wait text-center' *ngIf='show'>  انتظر لحظات لحين ارسال بياناتك </p>
+        <div class="alert-danger">{{error_msg}}</div>
+    </form>
+          <!-- drop down -->
+    
+<hr>
+       
+</section>
+
