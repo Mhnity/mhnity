@@ -23,6 +23,12 @@ header {
   position: relative;
 }
 
+@media (max-width: 991px) {
+  header {
+    height: 85vh;
+  }
+}
+
 header .slider .slide {
   position: relative;
   z-index: 22;
@@ -30,6 +36,18 @@ header .slider .slide {
   width: 100%;
   background: #f4f4f4;
   border-radius: 10px;
+}
+
+@media (max-width: 991px) {
+  header .slider .slide {
+    top: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  header .slider .slide {
+    height: 185px;
+  }
 }
 
 header .slider .slide .carousel-indicators {
@@ -54,6 +72,7 @@ header .slider .slide .carousel-inner .carousel-item .item {
 header .slider .slide .carousel-inner .carousel-item .item p {
   font-size: 20px;
   color: #111 !important;
+  line-height: 1.5;
 }
 
 header .slider .slide .carousel-inner .carousel-item .item a {
@@ -70,6 +89,18 @@ header .main_info {
   z-index: 999;
 }
 
+@media (max-width: 991px) {
+  header .main_info {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  header .main_info {
+    margin-top: -40px;
+  }
+}
+
 header .main_info h1 {
   font-weight: bold;
   font-size: 40px;
@@ -83,6 +114,12 @@ header .main_info p {
   font-weight: bold;
 }
 
+@media (max-width: 400px) {
+  header .main_info p {
+    font-size: 17px !important;
+  }
+}
+
 header .overlay {
   position: absolute;
   width: 100%;
@@ -90,7 +127,7 @@ header .overlay {
   z-index: 2;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /********************************************* end header *****************/

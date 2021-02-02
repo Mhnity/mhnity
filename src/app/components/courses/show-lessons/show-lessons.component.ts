@@ -41,8 +41,8 @@ export class ShowLessonsComponent implements OnInit {
             })
           /**** end  is user and admin **********/
 
-    let section=this.shard.getsection(),
-        level=this.shard.getlevel(),
+    let section=this.shard.getinfo().section,
+        level=this.shard.getinfo().level,
         term=this.shard.getTerm(),
         material=this.shard.getMaterial();
     this.material=material

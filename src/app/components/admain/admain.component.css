@@ -1,14 +1,32 @@
 .admin {
   font-family: 'Cairo', sans-serif;
   overflow: hidden;
-  padding-top: 50px;
+  padding: 55px 0 80px 0;
+  background: url("../../../assets/imgs/admin/admin.jpg");
+  background-size: cover;
   /********************************* start dash board *********************/
   /********************************* end popup  **********************/
 }
 
-.admin .top a {
-  color: red;
-  cursor: pointer;
+@media (max-width: 991px) {
+  .admin .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .admin .row .child_one {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .admin .row .child_two {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .admin .active_A {
@@ -18,29 +36,30 @@
 .admin form {
   border-radius: 34px;
   width: 70%;
-  margin: 50px auto 0 auto;
+  margin: 100px auto 0 auto;
   background: #fff;
-  border: 1px solid #fff;
-  padding: 40px 15px 0 15px;
+  border: 1px solid #F7BC18;
+  padding: 15px;
   position: relative;
   z-index: 99;
 }
 
 @media (max-width: 767px) {
   .admin form {
-    width: 100% !important;
+    width: 90% !important;
   }
 }
 
 .admin form .add_cours {
-  font-size: 19px;
+  font-size: 30px;
   font-weight: bold;
-  position: absolute;
-  top: -20px;
-  padding: 19px 29px;
-  border-radius: 50%;
-  left: 31%;
-  color: #3A7FC4;
+  text-align: center;
+  padding: 0 29px;
+  color: #222;
+}
+
+.admin form .add_cours span {
+  color: #F7BC18;
 }
 
 .admin form .cours_title {
@@ -52,24 +71,15 @@
   font-weight: bold;
 }
 
-.admin form .cours_title h3 {
-  font-size: 22px;
-  margin-top: 3px;
-}
-
 .admin form .cours_title h4 {
   margin: 9px 2px 0 2px;
   font-size: 19px;
-}
-
-.admin form .cours_title h5 {
-  margin: 11px 2px 0 2px;
-  font-size: 16px;
+  color: #F6850E;
 }
 
 .admin form .cours_title span {
   margin: 10px 5px 0 5px;
-  color: #086AD8;
+  color: #222;
 }
 
 .admin form .input_user {
@@ -101,13 +111,17 @@
   padding: 9px;
   border-radius: 10px;
   outline: none;
-  border: 1px solid #F2F2F2;
+  border: 1px solid #22283114;
   background: #F2F2F2;
+}
+
+.admin form div div {
+  text-align: right;
 }
 
 .admin form .img_div {
   outline: none;
-  border: 1px solid #F2F2F2;
+  border: 1px solid #22283114;
   background: #F2F2F2;
   position: relative;
   padding: 21px 5px;
@@ -118,7 +132,7 @@
   position: absolute;
   z-index: 3;
   left: 5px;
-  top: 5px;
+  top: 10px;
 }
 
 .admin form .img_div input {
@@ -129,7 +143,6 @@
   z-index: 2;
   height: 100%;
   width: 100%;
-  background: green;
   cursor: pointer;
 }
 
@@ -150,10 +163,18 @@
 .admin form button {
   display: block;
   margin: 0 auto;
-  padding: 10px 35px;
-  font-size: 20px;
+  padding: 6px 35px;
+  font-size: 25px;
   border-radius: 10px;
-  background: #3A7FC4 !important;
+  background: #222;
+  color: #F7BC18;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+.admin form button:hover {
+  background: #222831;
 }
 
 .admin form .err {
@@ -165,29 +186,72 @@
   padding-left: 0;
 }
 
+.admin .add_title {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.admin .add_title h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #F7BC18;
+}
+
+.admin .add_title h4 {
+  margin: 9px 2px 0 2px;
+  font-size: 22px;
+}
+
+.admin .add_title span {
+  margin: 10px 5px 0 5px;
+  color: #F6850E;
+}
+
 .admin aside {
-  margin-top: 70px;
   border-radius: 20px;
-  margin-right: 0;
+  margin: auto;
   text-align: right;
   cursor: auto;
   overflow-y: scroll;
   overflow-x: hidden;
   width: 100%;
-  height: 70vh;
-  background: #086AD8;
+  height: 63vh;
+  background: linear-gradient(50deg, #3f444beb, #222831);
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
-.admin aside .menus {
-  padding: 30px 40px;
+@media (max-width: 768px) {
+  .admin aside {
+    width: 90% !important;
+  }
 }
 
-.admin aside .menus h2 {
-  border-bottom: 1px solid #2D80DE;
-  padding: 0 7px 12px 5px;
-  font-size: 17px;
+.admin aside ul {
+  list-style: none;
+}
+
+.admin aside .menus {
+  padding: 20px 40px;
+}
+
+@media (max-width: 991px) {
+  .admin aside .menus {
+    padding: 15px;
+  }
+}
+
+.admin aside .menus .menu h2 {
+  border-bottom: 1px solid #f1f1f10a;
+  padding: 0 7px 7px 5px;
+  margin-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,51 +262,63 @@
   text-transform: capitalize;
 }
 
-.admin aside .menus h2 a {
+.admin aside .menus .menu h2 .sec {
   text-decoration: none;
-  color: #b7c1ce;
-  cursor: pointer;
-}
-
-.admin aside .menus h2 a:hover {
   color: lavender;
+  cursor: pointer;
+  font-size: 19px;
 }
 
-.admin aside .menus h2 .icons {
+.admin aside .menus .menu h2 .sec:hover {
+  color: #F7BC18;
+}
+
+.admin aside .menus .menu h2 .sec i {
+  font-size: 10px !important;
+  color: #F7BC18;
+}
+
+.admin aside .menus .menu h2 .icons {
   color: #F9FBFE;
   position: relative;
   right: 40px;
-  bottom: -7px;
+  bottom: -15px;
   text-align: center;
   display: none;
 }
 
-.admin aside .menus h2 .icons i {
+@media (max-width: 991px) {
+  .admin aside .menus .menu h2 .icons {
+    right: 5px;
+  }
+}
+
+.admin aside .menus .menu h2 .icons i {
   width: 40px;
   height: 40px;
-  background: #2179dc99;
+  background: #494f5a;
   line-height: 40px;
   cursor: pointer;
 }
 
-.admin aside .menus h2 .icons i:hover {
-  background: #2179DC;
+.admin aside .menus .menu h2 .icons i:hover {
+  background: #707785;
 }
 
-.admin aside .menus h2 .icons .down {
+.admin aside .menus .menu h2 .icons .down {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.admin aside .menus h2 .icons .up {
+.admin aside .menus .menu h2 .icons .up {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.admin aside .menus ul {
+.admin aside .menus .menu ul {
   padding: 0 22px;
   overflow: hidden;
   height: 0;
@@ -250,59 +326,50 @@
   transition: all .5s ease-in-out;
 }
 
-.admin aside .menus ul li {
+.admin aside .menus .menu ul li {
   line-height: 23px;
   padding: 6px 0;
   font-weight: bold;
-  font-size: 15px;
-  color: #B0CFF3;
+  color: lavender;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  border-bottom: 1px solid #2773ca;
+  border-bottom: 1px solid #f1f1f10a;
   cursor: pointer;
 }
 
-.admin aside .menus ul li:last-of-type {
+.admin aside .menus .menu ul li:last-of-type {
   border: none;
   padding-bottom: 0;
 }
 
-.admin aside .menus ul li:hover {
-  color: #f1f1f1;
+.admin aside .menus .menu ul li:hover {
+  color: #F7BC18;
 }
 
-.admin aside .menus ul li a {
+.admin aside .menus .menu ul li .inside_sec {
   text-decoration: none;
-  color: #B0CFF3;
+  color: lavender;
+  font-size: 14px !important;
 }
 
-.admin aside .menus ul li a:hover {
-  color: #f1f1f1;
+.admin aside .menus .menu ul li .inside_sec:hover {
+  color: #F7BC18;
 }
 
-.admin aside .menus .inside_ul {
-  list-style: none;
+.admin aside .menus .menu ul li ul li {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.admin aside .menus .inside_ul .inside_li a {
-  font-size: 15px;
-}
-
-.admin aside .menus .inside_ul .inside_li ul {
-  list-style: none;
-}
-
-.admin aside .menus .inside_ul .inside_li ul li {
-  font-family: Impact, 'Arial Narrow Bold', sans-serif;
-  font-size: 15px;
+.admin .hide_tit_1, .admin .hide_tit_2, .admin .hide_tit_3 {
+  opacity: 0;
 }
 
 .admin .show {
-  height: 135px !important;
+  height: auto !important;
 }
 
 .admin .show_when_click {
-  height: 201px !important;
+  height: auto !important;
 }
 
 .admin .show_inside {
@@ -312,5 +379,9 @@
 
 .admin .ds_block {
   display: block !important;
+}
+
+.admin .active {
+  color: #F7BC18 !important;
 }
 /*# sourceMappingURL=admain.component.css.map */

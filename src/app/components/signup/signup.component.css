@@ -1,8 +1,21 @@
+.signup {
+  background: url("../../../assets/imgs/login/login-background.jpg");
+  position: relative;
+  background-size: cover;
+  padding: 50px;
+}
+
+@media (max-width: 767px) {
+  .signup {
+    padding: 50px 0;
+  }
+}
+
 form {
   border-radius: 34px;
   width: 450px;
   margin: 130px auto 0 auto;
-  background: #3A7FC4;
+  background: #222831;
   border: 1px solid #fff;
   padding: 50px 15px;
   position: relative;
@@ -10,19 +23,34 @@ form {
 
 @media (max-width: 767px) {
   form {
-    width: 100% !important;
+    width: 90% !important;
   }
 }
 
 form .main_user {
   font-size: 63px;
   position: absolute;
-  top: -44px;
+  top: -60px;
   padding: 25px 29px;
   border-radius: 50%;
-  left: 38%;
+  left: 36%;
   color: #ffffff;
-  background: #3A7FC4;
+  background: #222831;
+  border-top: 1px solid #fff;
+}
+
+@media (max-width: 767px) {
+  form .main_user {
+    font-size: 43px;
+    top: -40px;
+    padding: 20px;
+    border-radius: 50%;
+    left: 37%;
+  }
+}
+
+form .main_title {
+  color: #00B0FF;
 }
 
 form .input_user {
@@ -58,10 +86,11 @@ form div input {
   background: #F2F2F2;
 }
 
-form .alert {
+form div .alert-danger {
+  padding: 5px;
   margin-top: 5px;
-  padding: 3px 8px;
-  border-radius: 5px;
+  border-radius: 6px;
+  text-align: right;
 }
 
 form button {
@@ -70,16 +99,15 @@ form button {
   font-weight: bold;
   outline: none;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 10px auto;
   padding: 10px 35px;
   font-size: 20px;
   border-radius: 10px;
-  background: #3A7FC4;
+  background: #00BFA6;
 }
 
 form button:hover {
-  background: #f1f1f1;
-  color: #3A7FC4;
+  opacity: .6;
 }
 
 form .err {

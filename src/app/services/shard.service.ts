@@ -49,6 +49,12 @@ setinfo(section,level,term,material,index){
   this.material=material;
   this.index=index;
  }
+ getinfo(){//تجارب
+   return{
+     section:this.section,
+     level:this.level,
+   }
+ }
  getsection(){
    return this.section;
  }
@@ -92,7 +98,7 @@ setinfo(section,level,term,material,index){
 
 
   
-   //set offer name
+  //set offer name
  setoffer(name){
   this.offer=name
   }

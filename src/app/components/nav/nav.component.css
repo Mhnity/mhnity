@@ -1,5 +1,5 @@
 .active_a {
-  color: #007BFF !important;
+  color: #F6850E !important;
 }
 
 nav {
@@ -13,10 +13,31 @@ nav {
   /*******************start ui_register ********************/
 }
 
-nav .logo img {
-  width: 60px;
-  height: 50px;
-  border-radius: 50%;
+@media (max-width: 991px) {
+  nav {
+    direction: ltr;
+    text-align: right;
+    background: #222831 !important;
+    padding: 0 20px;
+  }
+}
+
+nav .logo h1 {
+  color: #00BFA6;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+nav .logo h1 span {
+  color: #007BFF !important;
+}
+
+@media (max-width: 991px) {
+  nav .navbar-toggler {
+    background: #f1f1f1;
+    outline: none;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -25,12 +46,37 @@ nav .logo img {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1235px) {
+  nav .navbar-nav {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 nav .list {
   margin: 0 auto;
 }
 
+@media (max-width: 991px) {
+  nav .list {
+    padding: 20px 0;
+  }
+}
+
 nav .list li {
-  padding: 0 11px;
+  padding: 0 7px;
+}
+
+@media (min-width: 992px) and (max-width: 1100px) {
+  nav .list li {
+    padding: 0 2px;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1235px) {
+  nav .list li {
+    padding: 0 7px;
+  }
 }
 
 nav .list li .main_a {
@@ -39,8 +85,14 @@ nav .list li .main_a {
   font-weight: bold;
 }
 
+@media (max-width: 991px) {
+  nav .list li .main_a {
+    color: #fff !important;
+  }
+}
+
 nav .list li .main_a:hover {
-  color: #007BFF;
+  color: #F6850E;
 }
 
 nav .list li .btn {
@@ -48,8 +100,9 @@ nav .list li .btn {
 }
 
 nav .dropdown .dropdown-menu {
-  border-top: 2px solid #007BFF;
-  overflow: hidden;
+  border-top: 2px solid #222831;
+  max-height: 70vh;
+  overflow-y: scroll;
   padding: 0;
   width: 220px;
   border-radius: 5px;
@@ -65,7 +118,7 @@ nav .dropdown .dropdown-menu .dropdown-item {
 
 nav .dropdown .dropdown-menu .dropdown-item:hover {
   color: #fff;
-  background: #007BFF;
+  background: #222831;
   padding-right: 30px;
 }
 
@@ -75,26 +128,29 @@ nav .dropdown .dropdown-menu .dropdown-divider {
 
 @media (max-width: 830px) {
   nav .ul_register {
-    display: none;
+    display: block;
   }
 }
 
-@media (max-width: 1111px) {
-  nav .ul_register .main_li {
-    display: none;
+@media (min-width: 992px) and (max-width: 1235px) {
+  nav .ul_register {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
 nav .ul_register li {
-  padding: 0px 20px 0 20px;
+  padding: 0px 10px 0 10px;
+}
+
+@media (min-width: 992px) and (max-width: 1100px) {
+  nav .ul_register li {
+    padding: 0px 0 0 20px;
+  }
 }
 
 nav .ul_register li a:hover {
-  color: #007BFF;
-}
-
-nav .ul_register li a:hover i {
-  color: #007BFF;
+  color: #00B0FF;
 }
 
 nav .ul_register .mygumtree {
@@ -103,41 +159,67 @@ nav .ul_register .mygumtree {
 }
 
 nav .ul_register .mygumtree a {
-  border: 1px solid #007BFF;
+  border: 1px solid #222831;
   padding: 7px 15px;
   border-radius: 3px;
   outline: none;
+  color: #00B0FF;
+  font-weight: bold;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+@media (max-width: 991px) {
+  nav .ul_register .mygumtree a {
+    padding: 10px 5px;
+    border: 1px solid #999;
+  }
+  nav .ul_register .mygumtree a:hover {
+    border: 1px solid #222831;
+  }
+}
+
+nav .ul_register .mygumtree a:hover {
+  border: 1px solid #00B0FF;
 }
 
 nav .ul_register .mygumtree a i {
   font-size: 17px;
   position: relative;
   top: 2px;
-  color: #007BFF;
+  color: #00B0FF;
   margin-left: 7px;
 }
 
 nav .ul_register .mygumtree .down {
   text-align: right;
-  -webkit-box-shadow: 0 0 5px 2px #13111191;
-          box-shadow: 0 0 5px 2px #13111191;
+  -webkit-box-shadow: 0 0 1px 0px #13111152;
+          box-shadow: 0 0 1px 0px #13111152;
   position: absolute;
   width: 300px;
-  height: 230px;
+  height: auto;
   left: 19px;
   top: 38px;
-  background: #fff;
+  background: #4a5761;
   z-index: 9999;
-  padding: 20px 0;
+  padding: 0;
+}
+
+@media (max-width: 991px) {
+  nav .ul_register .mygumtree .down {
+    top: -250px !important;
+    direction: rtl;
+  }
 }
 
 nav .ul_register .mygumtree .down p {
   color: #444;
   padding: 0 20px;
+  line-height: 1.5;
 }
 
 nav .ul_register .mygumtree .down p span {
-  color: #222;
+  color: #007BFF;
   font-weight: bold;
 }
 
@@ -148,6 +230,7 @@ nav .ul_register .mygumtree .down ul {
 
 nav .ul_register .mygumtree .down ul li {
   color: #111;
+  margin-top: 3px;
 }
 
 nav .ul_register .mygumtree .down ul li i {
@@ -157,6 +240,7 @@ nav .ul_register .mygumtree .down ul li i {
 
 nav .ul_register .mygumtree .down .buttons {
   padding: 15px;
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,23 +257,51 @@ nav .ul_register .mygumtree .down .buttons button {
 }
 
 nav .ul_register .mygumtree .down .buttons button:first-of-type {
-  background: #007BFF;
-  border: 1px solid #007BFF;
+  background: #222831;
+  border: 1px solid #222;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
   color: #fff;
 }
 
-nav .ul_register .mygumtree .down .buttons button:first-of-type:hover {
-  background: #007BFF;
-}
-
 nav .ul_register .mygumtree .down .buttons button:last-of-type {
+  padding: 8px 30px;
   background: #fff;
-  border: 1px solid #007BFF;
-  color: #222;
+  border: 1px solid #222;
+  color: #007BFF;
+  font-weight: bold;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 nav .ul_register .mygumtree .down .buttons button:last-of-type:hover {
-  color: #007BFF;
+  opacity: .8;
+  background: #007BFF;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+nav .ul_register .mygumtree .down .clients_btn {
+  padding: 8px 30px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid #fe8d0a;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  left: 15px;
+  margin: 9px 180px 9px 0;
+  background: #437da5;
+}
+
+nav .ul_register .mygumtree .down .in .in_button:hover {
+  background: #007BFF;
+  border: 1px solid #fff;
+}
+
+nav .ul_register .mygumtree .down .out .out_button:hover {
+  background: #f00 !important;
+  border: 1px solid #fff;
 }
 
 .show_down {

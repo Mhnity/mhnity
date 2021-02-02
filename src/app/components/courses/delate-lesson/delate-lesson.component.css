@@ -1,0 +1,27 @@
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  color: red !important;
+}
+
+form {
+  width: 350px;
+  min-height: 120px;
+  background: #fff;
+  color: #222;
+  padding: 20px;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  form {
+    width: 340px;
+  }
+}
+
+form .buttons button {
+  margin: 0 20px;
+}
+/*# sourceMappingURL=delate-lesson.component.css.map */

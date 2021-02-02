@@ -1,0 +1,197 @@
+.signup {
+  background: url("../../../assets/imgs/login/login-background.jpg");
+  position: relative;
+  background-size: cover;
+  padding: 50px;
+}
+
+@media (max-width: 767px) {
+  .signup {
+    padding: 50px 0;
+  }
+}
+
+form {
+  border-radius: 34px;
+  width: 450px;
+  margin: 130px auto 0 auto;
+  background: #222831;
+  border: 1px solid #fff;
+  padding: 50px 15px 25px 15px;
+  position: relative;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  form {
+    width: 90% !important;
+  }
+}
+
+form .main_user {
+  font-size: 63px;
+  position: absolute;
+  top: -60px;
+  padding: 25px 29px;
+  border-radius: 50%;
+  left: 36%;
+  color: #ffffff;
+  background: #222831;
+  border-top: 1px solid #fff;
+}
+
+@media (max-width: 767px) {
+  form .main_user {
+    font-size: 43px;
+    top: -40px;
+    padding: 20px;
+    border-radius: 50%;
+    left: 37%;
+  }
+}
+
+form .main_title {
+  color: #00B0FF;
+}
+
+form .input_user {
+  position: absolute;
+  right: 25px;
+  top: 44%;
+  color: #555555e0;
+}
+
+form .input_key {
+  position: absolute;
+  right: 25px;
+  top: 61%;
+  color: #555555e0;
+}
+
+form h1 {
+  margin: 0 0 20px 0;
+  color: #fff;
+}
+
+form div {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+form div input {
+  width: 100%;
+  padding: 9px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #F2F2F2;
+  background: #F2F2F2;
+}
+
+form div .alert-danger {
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 6px;
+  text-align: right;
+}
+
+form .img_div {
+  outline: none;
+  border: 1px solid #22283114;
+  background: #F2F2F2;
+  position: relative;
+  padding: 21px 5px;
+  border-radius: 10px;
+}
+
+form .img_div label {
+  position: absolute;
+  z-index: 1;
+  right: 5px;
+  top: 10px;
+  color: #999;
+}
+
+form .img_div input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+form .img_div span {
+  position: absolute;
+  top: 11px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-right: 78px;
+}
+
+form button {
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  outline: none;
+  display: block;
+  margin: 0 auto 10px auto;
+  padding: 12px 35px 10px 35px;
+  font-size: 20px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#00BFA6), to(#00B0FF));
+  background: linear-gradient(90deg, #00BFA6, #00B0FF);
+}
+
+form button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#00B0FF), to(#00BFA6));
+  background: linear-gradient(90deg, #00B0FF, #00BFA6);
+}
+
+form .wait {
+  color: red;
+  font-size: 18px;
+  position: relative;
+  top: 10px;
+}
+
+form .err {
+  color: #f00;
+}
+
+form dir {
+  margin: 0;
+  padding-left: 0;
+}
+
+/* start ng-select  
+    .control-section{
+        margin:1px auto;
+        direction: rtl !important;
+        width:350px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        z-index:99999;
+        #content{
+         margin: 0px auto;
+          width:100%;
+          #diacritics{
+              background:#fff;
+              padding: 0 15px;
+              direction: rtl !important;
+          }
+        }
+        .e-input-group{
+           font-size: 16px;
+           color:#222;
+         }
+         .e-input-group-icon{
+             color: #E8505B;
+         }
+    }
+     */
+/*# sourceMappingURL=add-your-self.component.css.map */

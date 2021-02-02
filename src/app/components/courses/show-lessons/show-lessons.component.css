@@ -1,0 +1,175 @@
+.pop {
+  width: 500px;
+  background: #f1f1f1;
+  padding: 15px 15px 15px 0;
+  text-align: right;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+@media (max-width: 600px) {
+  .pop {
+    width: 280px;
+    padding: 20px 2px;
+  }
+}
+
+.pop .close {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+  z-index: 55;
+}
+
+.pop .close i {
+  color: #f00;
+}
+
+.pop .title {
+  color: #007BFF;
+  position: relative;
+  top: -1px;
+}
+
+@media (max-width: 600px) {
+  .pop .title {
+    margin-top: 20px;
+  }
+}
+
+.pop .title span {
+  color: #f50;
+}
+
+.pop article {
+  position: relative;
+}
+
+.pop article button {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.pop article button i {
+  color: #f00;
+}
+
+.pop article .a_article {
+  display: block;
+  text-decoration: none;
+  background: #222831;
+  color: #000;
+  margin: 30px 0;
+  height: 350px;
+  border: 1px solid #007BFF;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.pop article .a_article h2 {
+  color: #007BFF;
+  border-bottom: 1px solid #52535412;
+  font-size: 16px;
+}
+
+.pop article .a_article h2 span {
+  color: #fff;
+  font-size: 14px;
+}
+
+.pop article .a_article h1 {
+  color: #F6850E;
+  padding-top: 5px;
+}
+
+.pop article .a_article h1, .pop article .a_article h2 {
+  margin: 0;
+}
+
+.pop2 {
+  width: 500px;
+  min-height: 200px;
+  background-color: #fff;
+  padding: 15px;
+}
+
+@media (max-width: 600px) {
+  .pop2 {
+    width: 340px;
+  }
+}
+
+.pop2 .close {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+  right: 20px;
+  z-index: 55;
+}
+
+.pop2 .close i {
+  color: #f00;
+}
+
+.pop2 .info {
+  color: #222;
+}
+
+.pop2 .info p {
+  text-align: center;
+  margin-top: 30px;
+  color: #f00;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.pop2 .info h2 {
+  text-align: right;
+  width: auto;
+}
+
+.pop2 .info h2 a {
+  text-decoration: none;
+  color: #007BFF;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.pop2 .info h2 a:hover {
+  opacity: .7;
+}
+
+.pop2 .info .buttons {
+  text-align: right;
+}
+
+.pop2 .info .buttons button {
+  margin: 0 15px;
+  padding: 9px 13px !important;
+  font-weight: bold;
+}
+
+.pop2 .info .buttons .btn_new {
+  border: 1px solid #007BFF;
+  background: #fff;
+  margin-top: 5px;
+  border-radius: 5px;
+  outline: none;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+}
+
+.pop2 .info .buttons .btn_new:hover {
+  background: #007BFF;
+  color: #fff;
+}
+/*# sourceMappingURL=show-lessons.component.css.map */

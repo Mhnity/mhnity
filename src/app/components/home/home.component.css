@@ -1,32 +1,45 @@
 /********************************************************start header *************************/
 header {
   font-family: 'Cairo', sans-serif;
-  background: url("../../../assets/imgs/header/students2.jpg");
+  background: url("../../../assets/imgs/header/head4.svg");
   background-size: cover;
   height: 92vh;
   padding-top: 150px;
   margin-top: 9vh;
   margin-bottom: 50px;
   position: relative;
+  /*
+.overlay{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,.7);
+}*/
 }
 
-header .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.7);
+@media (max-width: 767px) {
+  header {
+    padding-top: 70px;
+    top: -5px;
+  }
 }
 
 header .info {
   text-align: right;
   padding: 10px;
-  line-height: 1.7;
   position: relative;
   z-index: 2;
+  top: -20px;
   /* start button */
   /* end button */
+}
+
+@media (max-width: 767px) {
+  header .info {
+    line-height: 1.4;
+  }
 }
 
 header .info .welcome {
@@ -35,6 +48,20 @@ header .info .welcome {
   padding: 0 20px;
   font-size: 40px;
   margin: 5px auto;
+  color: #3F3D56;
+}
+
+header .info .welcome span {
+  color: #f80;
+}
+
+@media (max-width: 767px) {
+  header .info .welcome {
+    font-size: 31px;
+  }
+  header .info .welcome span {
+    font-size: 35px;
+  }
 }
 
 header .info .welcome a {
@@ -42,7 +69,7 @@ header .info .welcome a {
   background-color: #322c25;
   color: #f80;
   cursor: pointer;
-  padding: 3px 23px;
+  padding: 7px 23px;
   font-size: 28px;
 }
 
@@ -64,12 +91,16 @@ header .info p {
   color: #f1f1f1;
   line-height: 1.8;
   word-spacing: 3px;
+  margin: 15px 0;
+  color: #3F3D56;
 }
 
 @media (max-width: 767px) {
   header .info p {
-    font-size: 17px;
-    width: 100% !important;
+    font-size: 18px;
+    width: 90% !important;
+    margin: 0;
+    line-height: 1.5;
   }
 }
 
@@ -82,11 +113,12 @@ header .info button {
   border: none;
   outline: none;
   position: absolute;
-  padding: 15px 35px;
+  border-radius: 5px;
+  padding: 14px 35px;
   left: 50%;
   margin-left: -76px;
-  background: -webkit-gradient(linear, left top, right top, from(#b1732d), to(#ce3f07));
-  background: linear-gradient(90deg, #b1732d, #ce3f07);
+  background: -webkit-gradient(linear, left top, right top, from(#00BFA6), to(#00B0FF));
+  background: linear-gradient(90deg, #00BFA6, #00B0FF);
   text-transform: uppercase;
   color: #f1f1f1;
   font-weight: bold;
@@ -95,16 +127,25 @@ header .info button {
 }
 
 header .info button:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#ce3f07), to(#b1732d));
-  background: linear-gradient(90deg, #ce3f07, #b1732d);
+  background: -webkit-gradient(linear, left top, right top, from(#00B0FF), to(#00BFA6));
+  background: linear-gradient(90deg, #00B0FF, #00BFA6);
+}
+
+@media (max-width: 767px) {
+  header .info button {
+    margin-top: 20px;
+    padding: 10px 25px;
+  }
 }
 
 /********************************************* end header **********************************/
 /********************************************* start features**********************************/
 .features {
   font-family: 'Cairo', sans-serif;
-  margin: 50px 0;
-  padding-top: 50px;
+  padding: 100px 0;
+  background: #fff;
+  position: relative;
+  top: -50px;
 }
 
 .features .item {
@@ -139,6 +180,20 @@ header .info button:hover {
 
 .features .item h3 {
   color: #111 !important;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.features .item p {
+  line-height: 1.3;
+  font-size: 19px;
+}
+
+@media (max-width: 767px) {
+  .features .item p {
+    font-size: 17px;
+  }
 }
 
 /********************************************* end features **********************************/
@@ -185,7 +240,7 @@ header .info button:hover {
   font-size: 15px;
   position: relative;
   top: 4px;
-  left: -100px;
+  left: -106px;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -195,7 +250,7 @@ header .info button:hover {
 }
 
 .plans .plan .info a:hover i {
-  left: -107px;
+  left: -110px;
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -245,7 +300,7 @@ header .info button:hover {
 }
 
 .sections .item:hover i, .sections .item:hover p {
-  color: #007BFF;
+  color: #00B0FF;
 }
 
 .sections .item .overlay {
@@ -262,7 +317,7 @@ header .info button:hover {
 .sections .item i {
   font-size: 50px;
   margin: 20px 0 30px 0;
-  color: #34495e;
+  color: #00BFA6;
 }
 
 .sections .item p {
@@ -272,6 +327,27 @@ header .info button:hover {
   z-index: 2;
   position: relative;
   cursor: pointer;
+}
+
+.sections button {
+  padding: 13px 25px;
+  outline: none;
+  border: 1px solid #b6a591;
+  background: -webkit-gradient(linear, left top, right top, from(#00BFA6), to(#00B0FF));
+  background: linear-gradient(90deg, #00BFA6, #00B0FF);
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 5px;
+  margin: 50px auto;
+  display: block;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.sections button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#00B0FF), to(#00BFA6));
+  background: linear-gradient(90deg, #00B0FF, #00BFA6);
 }
 
 /*********************************  end sections   *******************************/

@@ -1,0 +1,52 @@
+/****************************************************** start products   ************************************/
+.products {
+  position: relative;
+  z-index: 99;
+  margin-top: 100px;
+}
+
+.products .card {
+  margin: 15px 0;
+}
+
+@media (max-width: 767px) {
+  .products .card {
+    width: 100%;
+  }
+}
+
+.products .card .delate {
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  color: red;
+  opacity: .8;
+}
+
+.products .card .delate i {
+  font-size: 25px;
+}
+
+.products .card .delate:hover {
+  color: red;
+  opacity: 1;
+}
+
+.products .card .cont_img {
+  width: 100%;
+  height: 150px;
+}
+
+.products .card .cont_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.products .card .card-body .tit {
+  color: #00BFA6;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/****************************************************** end products   ************************************/
+/*# sourceMappingURL=get-offers.component.css.map */

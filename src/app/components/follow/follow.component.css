@@ -1,0 +1,78 @@
+.wellcome {
+  padding: 100px 20px;
+}
+
+.wellcome .cont_img {
+  margin: auto;
+  width: 50%;
+  height: 300px;
+}
+
+@media (max-width: 767px) {
+  .wellcome .cont_img {
+    width: 90%;
+  }
+}
+
+.wellcome .cont_img img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 500px) {
+  .wellcome .info {
+    position: relative;
+    top: -30px;
+  }
+}
+
+.wellcome .info h1 {
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: #F50057;
+}
+
+.wellcome .info span {
+  color: #00B0FF;
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 7px 0;
+}
+
+.wellcome .info p {
+  width: 70%;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .wellcome .info p {
+    width: 90%;
+    line-height: 1.6;
+  }
+}
+
+.wellcome .info button {
+  padding: 13px 25px;
+  outline: none;
+  border: 1px solid #b6a591;
+  background: -webkit-gradient(linear, left top, right top, from(#00B0FF), to(#00BFA6));
+  background: linear-gradient(90deg, #00B0FF, #00BFA6);
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 5px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.wellcome .info button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#00BFA6), to(#00B0FF));
+  background: linear-gradient(90deg, #00BFA6, #00B0FF);
+}
+
+.wellcome .info button a {
+  text-decoration: none;
+  color: #fff;
+}
+/*# sourceMappingURL=follow.component.css.map */
